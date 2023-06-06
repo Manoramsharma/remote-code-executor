@@ -58,5 +58,4 @@ npm start
 # CI/CD Flow
 <img src="https://i.ibb.co/wM8CcgM/CI-CD-Flow.png" alt="CI CD Flow">
 
-# Hosted Link
-The server is hosted and live at [rce.manish.codes](https://rce.manish.codes)
+
