@@ -1,15 +1,11 @@
-FROM node:12.18
-
-WORKDIR /rce
-
-RUN apt-get install python3 -y
+FROM node:18
+WORKDIR /app
 RUN apt-get update && \
-    apt-get -y install gcc mono-mcs && \
-    rm -rf /var/lib/apt/lists/*
-
-copy . .
+    apt-get install -y openjdk-11-jre-headless && \
+    apt-get clean;
+RUN apt-get install -y python
+COPY ./package*.json ./
 RUN npm install
-ENV PORT=8080
-EXPOSE 8080
-
-CMD [ "node", "index.js" ]
+COPY . .
+EXPOSE 3001
+CMD ["npm", "run", "start"]
