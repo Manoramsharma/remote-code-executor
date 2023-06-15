@@ -1,7 +1,7 @@
 FROM node:18
 WORKDIR /app
 RUN apt-get update && \
-    apt-get install -y openjdk-11-jre-headless && \
+    apt-get install default-jdk && \
     apt-get clean;
 RUN apt-get install -y python
 COPY ./package*.json ./
