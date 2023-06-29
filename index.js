@@ -6,11 +6,9 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 
-const origin = "https://rce-beta.vercel.app/"
-
 app.use(
   cors({
-    origin,
+    origin:"*",
     methods: ["GET", "POST", "OPTIONS", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })

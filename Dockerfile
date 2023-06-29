@@ -1,7 +1,7 @@
 FROM node:18
 WORKDIR /app
 RUN apt-get update && \
-    apt-get install default-jdk && \
+    apt-get install default-jre && \
     apt-get clean;
 RUN apt-get install -y python
 COPY ./package*.json ./
